@@ -186,6 +186,9 @@ include_directories(
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
 
+## Make sure that the python script gets installed properly and use the right python interpreter
+catkin_install_python(PROGRAMS scripts/Subscriber_Example.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
 #############
 ## Testing ##
 #############

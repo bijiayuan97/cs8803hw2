@@ -60,8 +60,6 @@ else()
   endif()
 endif()
 
-catkin_install_python(PROGRAMS scripts/Subscriber_Example.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+catkin_install_python(PROGRAMS scripts/Subscriber_Example.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 catkin_workspace()

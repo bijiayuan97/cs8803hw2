@@ -1,5 +1,5 @@
 <launch>
-<node pkg="s lam kar to " type="s lam kar to " name="s lam kar to " output="s c r e en">
-<remap from="scan " to="bas e s can " />
+<node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+<remap from="scan" to="base_scan" />
 </node>
 </launch>

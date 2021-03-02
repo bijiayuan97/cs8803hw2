@@ -95,7 +95,7 @@ def callback(msg):
         if prev_i + 1 > max_i:
             max_i = prev_i + 1
         parameters = gtsam.GaussNewtonParams()
-        parameters.setRelationErrorTol(1e-5)
+        parameters.setRelativeErrorTol(1e-5)
         parameters.setMaxiterations(100)
         optimizer = gtsam.GaussNewtonOptimizer(graph, initial_estimate, parameters)
 

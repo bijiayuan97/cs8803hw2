@@ -43,9 +43,9 @@ def euler_from_quaternion(x, y, z, w):
 all_prev_poses = [(0.0, 0.0, 0.0)]
 
 prev_pose = Odometry()
-PRIOR_NOISE = gtsam.noiseModel.Diagonal.Sigmas(vector3(0.1, 0.1, 0.1))
+PRIOR_NOISE = gtsam.noiseModel_Diagonal.Sigmas(vector3(0.1, 0.1, 0.1))
 graph = gtsam.NonlinearFactorGraph()
-ODOMETRY_NOISE = gtsam.noiseModel.Diagonal.Sigmas(vector3(0.1, 0.1, 0.1))
+ODOMETRY_NOISE = gtsam.noiseModel_Diagonal.Sigmas(vector3(0.1, 0.1, 0.1))
 graph.add(gtsam.PriorFactorPose2(1, gtsam.Pose2(0.0, 0.0, 0.0), PRIOR_NOISE))
 initial_estimate = gtsam.Values()
 initial_estimate.insert(1, gtsam.Pose2(0.0, 0.0, 0.0))
